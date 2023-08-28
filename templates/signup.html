@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Drops | Donate Drop Of Blood</title>
+</head>
+
+<body>
+    <section id="signup">
+        <!-- layout block goes here -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="custom-nav mr-2">
+                        <button id="home" class="signup-btn mt-3" type="submit">হোম</button>
+                    </div>
+                    <!-- custom nav ends here  -->
+                    <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex flex-column justify-content-between login-form">
+                            <!-- Form header title and subtitle -->
+                            <div>
+                                <h2 class="custom-title">নিবন্ধন</h2>
+                            </div>
+                            <!-- login form goes here  -->
+                            <div class="mt-4">
+                                
+                                <form id="signup-form"> {% csrf_token %}
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="nameInput" placeholder="নাম">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="idInput"
+                                            placeholder="ইউনিভার্সিটি  আইডি">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="phoneInput"
+                                            placeholder="ফোন নাম্বার">
+                                    </div>
+                                    <select class="form-select form-control mb-3" id="groups">
+                                        <option selected>রক্তের গ্রুপ নির্বাচন করুন</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                    <button type="submit" class="login-btn">রেজিস্টার করুন</button>
+                                </form>
+                                <!-- login form ends here  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- layout block ends here -->
+    <!-- bootstrap js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<!-- Include SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="text-center">
+        <style>
+            .made-with-love {
+                font-size: 12px;
+            }
+
+            .heart {
+                font-style: normal;
+                font-weight: 500;
+                color: #C0392B;
+            }
+
+            .support-me {
+                background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+                background-color: #ffec64;
+                border-radius: 4px;
+                border: 1px solid #ffaa22;
+                display: inline-block;
+                cursor: pointer;
+                color: #333333 !important;
+                font-family: Arial;
+                font-size: 12px;
+                line-height: 1em;
+                font-weight: bold;
+                padding: 6px 10px;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #ffee66;
+            }
+
+            .support-me:hover {
+                text-decoration: none;
+            }
+
+            .support-me:active {
+                opacity: .8;
+            }
+        </style>
+        <p class="made-with-love">Made with <i class="heart" aria-label="love">&#10084;</i> by <a href="#">Md Saikat</a>
+        </p>
+    </div>
+</footer>
+
+</html>
