@@ -157,4 +157,4 @@ if not DEBUG:
     }
 
 # admin panel CSRF missing issue
-CSRF_TRUSTED_ORIGINS = ['https://*.thesaikat.xyz']
+CSRF_TRUSTED_ORIGINS = ['https://drops.itsaikat.com', 'http://drops.itsaikat.com']
