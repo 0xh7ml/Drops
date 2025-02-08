@@ -5,6 +5,9 @@ django-filter==23.2
 django-jazzmin==2.6.0
 djangorestframework==3.14.0
 Markdown==3.4.4
+mysqlclient==2.2.7
+python-dotenv==1.0.1
 pytz==2023.3
 sqlparse==0.4.4
+tzdata==2025.1
 whitenoise==6.5.0
