@@ -3,6 +3,7 @@
 const newDonor = document.getElementById('giveBlood');
 const findDonors = document.getElementById('takeBlood');
 const homeurl = document.getElementById('home');
+const baseURL = 'https://drops.itsaikat.com/api/v1';
 
 if (newDonor != null) {
     newDonor.addEventListener('click', () => {
@@ -70,7 +71,7 @@ function CreateDonor(data) {
         redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:8000/api/v1/register/", requestOptions)
+    fetch(`${baseURL}/register/`, requestOptions)
         .then(response => response.json())
         .then(result => {
             window.location.href = '/success';
@@ -87,7 +88,7 @@ if (donorWrap != null) {
 }
 
 function getDonorData() {
-    fetch("http://127.0.0.1:8000/api/v1/donors/")
+    fetch(`{baseURL}/donors/`)
         .then(response => response.json())
         .then(data => {
             if(data.length != 0){
