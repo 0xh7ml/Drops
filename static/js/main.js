@@ -110,7 +110,7 @@ function showDonors(data) {
                 <div class="horizontal-subtitle">ID: ${data.universityId}</div>
             </div>
             <span class="horizontal-call">
-                <a href="tel:+${data.phoneNumber}"><i class="bi bi-telephone-outbound-fill"></i></a>
+                <a href="tel:+880${data.phoneNumber}"><i class="bi bi-telephone-outbound-fill"></i></a>
             </span>
         </div>
     </div>`;
